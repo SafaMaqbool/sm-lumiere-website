@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <header className="bg-navy text-white sticky top-0 z-50">
+    <header className="bg-black text-white sticky top-0 z-50">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
         <Link href="/" className="font-heading text-2xl font-semibold text-gold">
           SM Lumière

@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <section className="bg-cream py-24 md:py-32">
+    <section className="bg-white py-24 md:py-32">
       <div className="max-w-5xl mx-auto px-6 text-center">
         <h1 className="font-heading text-4xl md:text-6xl font-semibold text-navy leading-tight">
           Empowering People. Elevating Businesses. Creating Opportunities.
