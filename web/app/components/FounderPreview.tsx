@@ -4,7 +4,7 @@ export default function FounderPreview() {
   return (
     <section className="bg-white py-16 md:py-24">
       <div className="max-w-5xl mx-auto px-4 md:px-6 grid md:grid-cols-2 gap-10 md:gap-16 items-center">
-        <div className="relative w-full aspect-[4/5] rounded-lg overflow-hidden">
+        <div className="relative w-full aspect-4/5 rounded-lg overflow-hidden">
           <Image
             src="/images/Shagufta-pic-5.jpg"
             alt="Shagufta Munaf, Founder of SM Lumière"
