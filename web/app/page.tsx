@@ -12,7 +12,7 @@ export default function Home() {
     <main>
       <Hero />
       <WelcomeMessage />
-      <VisionMission/>
+      <VisionMission background="white" />
       <ShortIntro/>
       <WhatWeDo/>
       <FeaturedEvents/>

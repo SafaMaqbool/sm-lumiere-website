@@ -5,19 +5,23 @@
   --foreground: #171717;
 
   --color-gold: #D4AF37;
+  --color-gold-dark: #8A6D14;
   --color-navy: #2B3044;
   --color-cream: #FFF8F0;
+  --color-ink: #14171C;
+  --color-rule: #E4E0D8;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 
   --color-gold: var(--color-gold);
+  --color-gold-dark: var(--color-gold-dark);
   --color-navy: var(--color-navy);
   --color-cream: var(--color-cream);
+  --color-ink: var(--color-ink);
+  --color-rule: var(--color-rule);
 
   --font-heading: var(--font-lora);
   --font-body: var(--font-roboto);

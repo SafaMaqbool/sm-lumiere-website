@@ -1,18 +1,18 @@
 export default function WelcomeMessage() {
   return (
-    <section className="bg-cream py-20">
-      <div className="max-w-3xl mx-auto px-6 text-center">
-        <span className="font-body text-xs tracking-[0.2em] uppercase text-gold">
+    <section className="bg-cream py-14 md:py-24">
+      <div className="max-w-[42rem] mx-auto px-6">
+        <span className="font-body text-[13px] tracking-[0.08em] uppercase text-gold-dark">
           Welcome
         </span>
-        <div className="w-12 h-px bg-gold mx-auto mt-3 mb-8" />
-        <p className="font-body text-lg text-navy/80 leading-relaxed">
+        <div className="w-12 h-px bg-gold mt-3 mb-8" />
+        <p className="font-body text-[17px] md:text-[19px] text-navy/80 leading-[1.6]">
           Welcome to SM Lumière—a purpose-driven platform dedicated to
           empowering entrepreneurs, supporting home-based businesses,
           promoting talent, and creating meaningful opportunities through
           business events, networking, education, and community engagement.
         </p>
-        <p className="font-body text-lg text-navy/80 leading-relaxed mt-6">
+        <p className="font-body text-[16px] text-navy/80 leading-[1.65] mt-6">
           At SM Lumière, we believe that every dream deserves a platform,
           every talent deserves recognition, and every entrepreneur deserves
           the opportunity to grow. We bring together ambitious individuals,

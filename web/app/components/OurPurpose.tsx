@@ -2,7 +2,7 @@ export default function OurPurpose() {
   return (
     <section className="bg-white py-14 sm:py-20">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
-        <span className="font-body text-xs tracking-[0.2em] uppercase text-gold">
+        <span className="font-body text-[13px] tracking-[0.08em] uppercase text-gold-dark">
           Our Purpose
         </span>
         <div className="w-12 h-px bg-gold mx-auto mt-3 mb-8" />
