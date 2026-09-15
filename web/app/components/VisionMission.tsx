@@ -8,9 +8,12 @@ export default function VisionMission() {
           </h2>
           <p className="font-body text-navy/70 leading-relaxed">
             To become a globally recognised platform that empowers
-            entrepreneurs, celebrates talent, strengthens communities, and
-            creates opportunities that inspire innovation, leadership, and
-            sustainable growth.
+            entrepreneurs, celebrates talent, builds meaningful connections,
+            and inspires positive change through leadership, innovation, and
+            collaboration. We envision a future where every entrepreneur,
+            home-based business, creative professional, and emerging leader
+            has access to opportunities that help them succeed and make a
+            meaningful impact.
           </p>
         </div>
 
@@ -19,12 +22,13 @@ export default function VisionMission() {
             Our Mission
           </h2>
           <p className="font-body text-navy/70 leading-relaxed">
-            Our mission is to create opportunities that empower individuals
-            and businesses through networking, education, collaboration, and
-            community engagement. We are committed to supporting
-            entrepreneurs, promoting emerging talent, encouraging
-            innovation, and helping businesses grow with confidence,
-            purpose, and long-term impact.
+            Our mission is to create opportunities that inspire growth,
+            encourage collaboration, and support entrepreneurial success.
+            Through business exhibitions, networking events, educational
+            programs, leadership development, and community initiatives, we
+            aim to help individuals and businesses increase their
+            visibility, strengthen their capabilities, and build valuable
+            relationships that lead to long-term success.
           </p>
         </div>
       </div>
