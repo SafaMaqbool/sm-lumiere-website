@@ -1,8 +1,8 @@
 export default function FounderVisionMission() {
   return (
-    <section className="bg-white py-14 sm:py-20">
+    <section className="bg-cream py-14 sm:py-20">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 grid md:grid-cols-2 gap-6 md:gap-10">
-        <div className="bg-cream rounded-lg p-6 md:p-8 shadow-sm border-t-4 border-gold">
+        <div className="bg-white rounded-lg p-6 md:p-8 shadow-sm border-t-4 border-gold">
           <h2 className="font-heading text-2xl font-semibold text-navy mb-4">
             Vision
           </h2>
@@ -14,7 +14,7 @@ export default function FounderVisionMission() {
           </p>
         </div>
 
-        <div className="bg-cream rounded-lg p-6 md:p-8 shadow-sm border-t-4 border-gold">
+        <div className="bg-white rounded-lg p-6 md:p-8 shadow-sm border-t-4 border-gold">
           <h2 className="font-heading text-2xl font-semibold text-navy mb-4">
             Mission
           </h2>

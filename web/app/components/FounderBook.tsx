@@ -1,6 +1,6 @@
 export default function FounderBook() {
   return (
-    <section className="bg-cream py-14 sm:py-20 md:py-24">
+    <section className="bg-white py-14 sm:py-20 md:py-24">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
         <span className="font-body text-xs tracking-[0.2em] uppercase text-gold">
           Upcoming Book

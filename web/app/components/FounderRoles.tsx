@@ -23,7 +23,7 @@ const roles = [
 
 export default function FounderRoles() {
   return (
-    <section className="bg-white py-14 sm:py-20 md:py-24">
+    <section className="bg-cream py-14 sm:py-20 md:py-24">
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
         <div className="text-center mb-8 md:mb-10">
           <span className="font-body text-xs tracking-[0.2em] uppercase text-gold">
@@ -35,7 +35,7 @@ export default function FounderRoles() {
           {roles.map((role) => (
             <div
               key={role.title}
-              className="bg-cream rounded-lg p-6 md:p-8 shadow-sm border-t-4 border-gold"
+              className="bg-white rounded-lg p-6 md:p-8 shadow-sm border-t-4 border-gold"
             >
               <h2 className="font-heading text-lg md:text-xl font-semibold text-navy mb-3">
                 {role.title}

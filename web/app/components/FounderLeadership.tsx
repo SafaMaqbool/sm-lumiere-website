@@ -1,6 +1,6 @@
 export default function FounderLeadership() {
   return (
-    <section className="bg-cream py-14 sm:py-20 md:py-24">
+    <section className="bg-white py-14 sm:py-20 md:py-24">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 grid md:grid-cols-[1fr_1.4fr] gap-6 md:gap-12 items-start">
         <p className="font-heading text-2xl sm:text-3xl md:text-4xl text-navy leading-snug">
           Leadership Journey
