@@ -38,9 +38,9 @@ const values = [
 
 export default function CoreValues() {
   return (
-    <section className="bg-white py-16 md:py-24">
-      <div className="max-w-5xl mx-auto px-4 md:px-6">
-        <h2 className="font-heading text-2xl md:text-3xl text-navy text-center mb-10">
+    <section className="bg-white py-14 sm:py-16 md:py-24">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6">
+        <h2 className="font-heading text-2xl md:text-3xl text-navy text-center mb-8 md:mb-10">
           Our Core Values
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
