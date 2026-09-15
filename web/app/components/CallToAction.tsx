@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function CallToAction() {
   return (
     <section className="bg-cream py-16 md:py-24">
@@ -17,19 +19,18 @@ export default function CallToAction() {
           and success is celebrated.
         </p>
         <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-          <a
+          <Link
             href="/contact"
-           className="inline-block bg-gold text-navy font-body font-medium px-8 py-3 rounded-full hover:bg-navy hover:text-gold transition-colors"
-          
+            className="inline-block bg-gold text-navy font-body font-medium px-8 py-3 rounded-full hover:bg-navy hover:text-gold transition-colors"
           >
             Join SM Lumière
-          </a>
-          <a
+          </Link>
+          <Link
             href="/partners"
             className="inline-block border border-gold text-gold font-body font-medium px-8 py-3 rounded-full hover:bg-gold hover:text-navy transition-colors"
           >
             Partner With Us
-          </a>
+          </Link>
         </div>
       </div>
     </section>

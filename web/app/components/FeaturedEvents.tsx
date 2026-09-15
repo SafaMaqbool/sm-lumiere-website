@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function FeaturedEvents() {
   return (
     <section className="bg-cream py-16 md:py-24">
@@ -13,12 +15,12 @@ export default function FeaturedEvents() {
           visibility, and unlock new opportunities.
         </p>
         <div className="mt-8">
-          <a
+          <Link
             href="/events"
             className="inline-block bg-gold text-navy font-body font-medium px-8 py-3 rounded-full hover:bg-navy hover:text-gold transition-colors"
           >
             Explore Our Events
-          </a>
+          </Link>
         </div>
       </div>
     </section>

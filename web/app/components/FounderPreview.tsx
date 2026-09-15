@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function FounderPreview() {
   return (
@@ -29,12 +30,12 @@ export default function FounderPreview() {
             collaboration, and innovation.
           </p>
           <div className="mt-8">
-            <a
+            <Link
               href="/meet-the-founder"
               className="inline-block border border-navy text-navy font-body font-medium px-8 py-3 rounded-full hover:bg-navy hover:text-white transition-colors"
             >
               Learn More About the Founder
-            </a>
+            </Link>
           </div>
         </div>
       </div>

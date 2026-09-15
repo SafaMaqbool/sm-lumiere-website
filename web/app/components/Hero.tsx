@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Hero() {
   return (
     <section className="bg-white py-24 md:py-32">
@@ -13,18 +15,18 @@ export default function Hero() {
           Build Your Brand. Expand Your Network. Unlock New Opportunities.
         </p>
         <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-          <a
+          <Link
             href="/events"
             className="inline-block bg-gold text-navy font-body font-medium px-8 py-3 rounded-full hover:bg-navy hover:text-gold transition-colors"
           >
             Explore Events
-          </a>
-          <a
+          </Link>
+          <Link
             href="/contact"
             className="inline-block border border-navy text-navy font-body font-medium px-8 py-3 rounded-full hover:bg-navy hover:text-white transition-colors"
           >
             Join Our Community
-          </a>
+          </Link>
         </div>
       </div>
     </section>
