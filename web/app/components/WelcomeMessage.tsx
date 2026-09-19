@@ -1,7 +1,7 @@
 export default function WelcomeMessage() {
   return (
     <section className="bg-cream py-14 md:py-24">
-      <div className="max-w-[42rem] mx-auto px-6">
+      <div className="max-w-2xl mx-auto px-6">
         <span className="font-body text-[13px] tracking-[0.08em] uppercase text-gold-dark">
           Welcome
         </span>

@@ -18,6 +18,19 @@ export const testimonial = defineType({
       description: 'e.g. Parent, Student, Partner Organization',
     }),
     defineField({
+      name: 'category',
+      title: 'Category',
+      type: 'string',
+      options: {
+        list: [
+          {title: 'Participant', value: 'participant'},
+          {title: 'Vendor', value: 'vendor'},
+          {title: 'Sponsor & Partner', value: 'sponsor'},
+          {title: 'Client', value: 'client'},
+        ],
+      },
+    }),
+    defineField({
       name: 'quote',
       title: 'Quote',
       type: 'text',

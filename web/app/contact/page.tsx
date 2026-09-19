@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
-import ComingSoon from "../components/ComingSoon";
+import ContactHero from "../components/contact/ContactHero";
+import ContactIntro from "../components/contact/ContactIntro";
+import ContactMain from "../components/contact/ContactMain";
+import ContactClosing from "../components/contact/ContactClosing";
 
 export const metadata: Metadata = {
   title: "Contact | SM Lumière",
@@ -9,10 +12,10 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <main>
-      <ComingSoon
-        label="Contact"
-        description="Our contact page is on its way. Reach us at hello@smlumiere.com in the meantime."
-      />
+      <ContactHero />
+      <ContactIntro />
+      <ContactMain />
+      <ContactClosing />
     </main>
   );
 }

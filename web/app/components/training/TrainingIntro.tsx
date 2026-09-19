@@ -1,7 +1,7 @@
 export default function TrainingIntro() {
   return (
     <section className="bg-cream py-14 md:py-24">
-      <div className="max-w-[42rem] mx-auto px-6">
+      <div className="max-w-2xl mx-auto px-6">
         <p className="font-body text-[17px] md:text-[19px] text-navy/80 leading-[1.6]">
           At SM Lumière, we believe that lasting success begins with
           continuous learning, the right mindset, and purposeful leadership.

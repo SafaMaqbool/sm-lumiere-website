@@ -1,7 +1,7 @@
 export default function OurCommitment() {
   return (
     <section className="bg-white py-14 md:py-24">
-      <div className="max-w-[42rem] mx-auto px-6">
+      <div className="max-w-2xl mx-auto px-6">
         <h2 className="font-heading text-[27px] md:text-[36px] leading-[1.18] text-navy mb-6">
           Our Commitment
         </h2>

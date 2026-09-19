@@ -23,5 +23,17 @@ export const partner = defineType({
       title: 'Website URL',
       type: 'url',
     }),
+    defineField({
+      name: 'category',
+      title: 'Category',
+      type: 'string',
+      options: {
+        list: [
+          {title: 'Brand Partner', value: 'brand'},
+          {title: 'Sponsor', value: 'sponsor'},
+        ],
+      },
+      initialValue: 'brand',
+    }),
   ],
 })

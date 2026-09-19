@@ -8,7 +8,10 @@ const links = [
   { href: "/about", label: "About" },
   { href: "/events", label: "Events" },
   { href: "/training", label: "Training & Coaching" },
+  { href: "/community", label: "Community Impact" },
   { href: "/gallery", label: "Gallery" },
+  { href: "/testimonials", label: "Testimonials" },
+  { href: "/media-press", label: "Media & Press" },
   { href: "/meet-the-founder", label: "Meet the Founder" },
   { href: "/partners", label: "Partners" },
   { href: "/contact", label: "Contact" },
@@ -71,7 +74,7 @@ export default function Navbar() {
           SM Lumière
         </Link>
 
-        <nav className="hidden md:flex gap-6 font-body text-sm">
+        <nav className="hidden lg:flex gap-5 font-body text-sm">
           {links.map((link) => (
             <Link
               key={link.href}
@@ -90,7 +93,7 @@ export default function Navbar() {
           aria-expanded={open}
           aria-controls="mobile-nav-panel"
           aria-label="Toggle menu"
-          className="md:hidden inline-flex items-center justify-center w-11 h-11 -mr-2"
+          className="lg:hidden inline-flex items-center justify-center w-11 h-11 -mr-2"
         >
           <span className="inline-flex flex-col justify-center gap-1.5 w-6 h-6">
             <span
@@ -114,7 +117,7 @@ export default function Navbar() {
 
       {open && (
         <div
-          className="fixed inset-0 top-[68px] z-40 bg-black/40 md:hidden"
+          className="fixed inset-0 top-[68px] z-40 bg-black/40 lg:hidden"
           onClick={closeMenu}
           aria-hidden="true"
         />
@@ -124,7 +127,7 @@ export default function Navbar() {
         <nav
           id="mobile-nav-panel"
           ref={panelRef}
-          className="md:hidden fixed inset-x-0 top-[68px] z-50 bg-ink border-t border-white/10 px-6 py-6 flex flex-col gap-5 font-body text-[19px]"
+          className="lg:hidden fixed inset-x-0 top-[68px] z-50 bg-ink border-t border-white/10 px-6 py-6 flex flex-col gap-5 font-body text-[19px] overflow-y-auto max-h-[calc(100vh-68px)]"
         >
           {links.map((link, i) => (
             <Link

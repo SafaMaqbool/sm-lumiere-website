@@ -18,6 +18,19 @@ export const pressItem = defineType({
       description: 'e.g. Dawn News, Express Tribune',
     }),
     defineField({
+      name: 'category',
+      title: 'Category',
+      type: 'string',
+      options: {
+        list: [
+          {title: 'Interview', value: 'interview'},
+          {title: 'Press Feature', value: 'press'},
+          {title: 'Award & Recognition', value: 'award'},
+        ],
+      },
+      initialValue: 'press',
+    }),
+    defineField({
       name: 'link',
       title: 'External Link',
       type: 'url',
