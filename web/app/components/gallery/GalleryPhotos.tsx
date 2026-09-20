@@ -34,6 +34,7 @@ export default async function GalleryPhotos() {
                   src={urlFor(item.image).width(500).height(500).url()}
                   alt={item.title}
                   fill
+                  sizes="(min-width: 768px) 25vw, 50vw"
                   className="object-cover"
                 />
               </div>

@@ -42,6 +42,7 @@ export default function PartnerSection({
                       src={urlFor(item.logo).width(240).height(120).fit("max").url()}
                       alt={item.name}
                       fill
+                      sizes="(min-width: 1024px) 25vw, (min-width: 640px) 33vw, 50vw"
                       className="object-contain"
                     />
                   </div>

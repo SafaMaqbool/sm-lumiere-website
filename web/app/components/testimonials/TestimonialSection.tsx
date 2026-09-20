@@ -52,6 +52,7 @@ export default function TestimonialSection({
                         src={urlFor(item.photo).width(88).height(88).url()}
                         alt={item.name}
                         fill
+                        sizes="44px"
                         className="object-cover"
                       />
                     </div>

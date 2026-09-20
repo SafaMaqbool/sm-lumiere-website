@@ -46,6 +46,7 @@ export default async function UpcomingEvents() {
                       src={urlFor(event.coverImage).width(600).height(450).url()}
                       alt={event.title}
                       fill
+                      sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                       className="object-cover"
                     />
                   </div>

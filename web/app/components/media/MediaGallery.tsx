@@ -35,6 +35,7 @@ export default function MediaGallery({ items }: MediaGalleryProps) {
                   src={urlFor(item.thumbnail!).width(500).height(500).url()}
                   alt={item.title}
                   fill
+                  sizes="(min-width: 768px) 25vw, 50vw"
                   className="object-cover"
                 />
               </div>

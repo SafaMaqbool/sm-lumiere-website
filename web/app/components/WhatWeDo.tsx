@@ -38,7 +38,7 @@ export default function WhatWeDo() {
         <h2 className="font-heading text-[27px] md:text-[36px] leading-[1.18] text-navy text-center mb-10">
           What We Do
         </h2>
-        <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
           {services.map((service) => (
             <div
               key={service.title}
@@ -46,7 +46,7 @@ export default function WhatWeDo() {
                 service.flagship ? "border-gold" : "border-rule"
               }`}
             >
-              <p className="font-body text-[19px] md:text-[21px] leading-[1.35] text-navy">
+              <p className="font-body text-[19px] md:text-[21px] leading-[1.35] text-navy break-words">
                 {service.title}
               </p>
               {service.description && (

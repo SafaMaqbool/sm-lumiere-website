@@ -9,6 +9,7 @@ export default function FounderHero() {
             src="/images/Shagufta-pic-5.jpg"
             alt="Shagufta Munaf, Founder & CEO of SM Lumière"
             fill
+            sizes="(min-width: 768px) 50vw, 100vw"
             className="object-cover"
             priority
           />

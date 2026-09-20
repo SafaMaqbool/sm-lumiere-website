@@ -10,6 +10,7 @@ export default function FounderPreview() {
             src="/images/Shagufta-pic-5.jpg"
             alt="Shagufta Munaf, Founder of SM Lumière"
             fill
+            sizes="(min-width: 768px) 50vw, 100vw"
             className="object-cover"
           />
         </div>
