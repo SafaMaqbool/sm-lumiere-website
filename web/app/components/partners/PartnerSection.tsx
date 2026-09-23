@@ -1,6 +1,7 @@
 import Image from "next/image";
 import type { Partner } from "@/sanity/queries";
 import { urlFor } from "@/sanity/image";
+import Reveal from "../Reveal";
 
 type PartnerSectionProps = {
   background: "white" | "cream";
@@ -32,7 +33,7 @@ export default function PartnerSection({
           </p>
         ) : (
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
-            {items.map((item) => {
+            {items.map((item, i) => {
               const logo = (
                 <div
                   className={`${cardFill} rounded-lg border border-rule flex items-center justify-center p-6 h-28 transition-all duration-200 hover:-translate-y-1 hover:shadow-md hover:border-gold`}
@@ -49,17 +50,16 @@ export default function PartnerSection({
                 </div>
               );
 
-              return item.website ? (
-                <a
-                  key={item._id}
-                  href={item.website}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {logo}
-                </a>
-              ) : (
-                <div key={item._id}>{logo}</div>
+              return (
+                <Reveal key={item._id} delay={(i % 4) * 70}>
+                  {item.website ? (
+                    <a href={item.website} target="_blank" rel="noopener noreferrer">
+                      {logo}
+                    </a>
+                  ) : (
+                    logo
+                  )}
+                </Reveal>
               );
             })}
           </div>

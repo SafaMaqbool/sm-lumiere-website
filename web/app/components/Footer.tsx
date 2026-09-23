@@ -17,7 +17,7 @@ const sitemap = [
 
 export default function Footer() {
   return (
-    <footer className="bg-ink text-white mt-auto">
+    <footer className="bg-ink text-white mt-auto border-t-2 border-gold">
       <div className="max-w-7xl mx-auto px-6 py-14 grid gap-10 md:grid-cols-3 md:gap-8">
         <div>
           <p className="font-heading text-xl text-gold">SM Lumière</p>

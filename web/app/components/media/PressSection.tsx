@@ -2,6 +2,7 @@ import Image from "next/image";
 import type { PressItem } from "@/sanity/queries";
 import { urlFor } from "@/sanity/image";
 import { formatDate } from "@/lib/formatDate";
+import Reveal from "../Reveal";
 
 type PressSectionProps = {
   background: "white" | "cream";
@@ -38,7 +39,7 @@ export default function PressSection({
           </p>
         ) : (
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {items.map((item) => {
+            {items.map((item, i) => {
               const card = (
                 <div
                   className={`group ${cardFill} rounded-lg overflow-hidden border-t-4 border-gold h-full flex flex-col transition-all duration-200 hover:-translate-y-1 hover:shadow-md`}
@@ -69,12 +70,16 @@ export default function PressSection({
                 </div>
               );
 
-              return item.link ? (
-                <a key={item._id} href={item.link} target="_blank" rel="noopener noreferrer" className="block">
-                  {card}
-                </a>
-              ) : (
-                <div key={item._id}>{card}</div>
+              return (
+                <Reveal key={item._id} delay={(i % 3) * 80}>
+                  {item.link ? (
+                    <a href={item.link} target="_blank" rel="noopener noreferrer" className="block">
+                      {card}
+                    </a>
+                  ) : (
+                    card
+                  )}
+                </Reveal>
               );
             })}
           </div>

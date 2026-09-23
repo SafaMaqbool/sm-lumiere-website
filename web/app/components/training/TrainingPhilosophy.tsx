@@ -1,3 +1,5 @@
+import Reveal from "../Reveal";
+
 const pillars = [
   "A Growth Mindset",
   "Continuous Learning",
@@ -16,15 +18,14 @@ export default function TrainingPhilosophy() {
         </p>
 
         <div className="grid sm:grid-cols-3 gap-4 md:gap-6 mt-10">
-          {pillars.map((pillar) => (
-            <div
-              key={pillar}
-              className="bg-cream rounded-lg p-6 border-t-4 border-gold transition-all duration-200 hover:-translate-y-1 hover:shadow-md"
-            >
-              <p className="font-body text-[19px] md:text-[21px] leading-[1.35] text-navy">
-                {pillar}
-              </p>
-            </div>
+          {pillars.map((pillar, i) => (
+            <Reveal key={pillar} delay={i * 100}>
+              <div className="bg-cream rounded-lg p-6 border-t-4 border-gold transition-all duration-200 hover:-translate-y-1 hover:shadow-md">
+                <p className="font-body text-[19px] md:text-[21px] leading-[1.35] text-navy">
+                  {pillar}
+                </p>
+              </div>
+            </Reveal>
           ))}
         </div>
 

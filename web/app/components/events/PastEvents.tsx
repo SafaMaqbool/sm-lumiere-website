@@ -2,6 +2,7 @@ import Image from "next/image";
 import { getPastEvents } from "@/sanity/queries";
 import { urlFor } from "@/sanity/image";
 import { formatDate } from "@/lib/formatDate";
+import Reveal from "../Reveal";
 
 export default async function PastEvents() {
   const events = await getPastEvents();
@@ -20,36 +21,35 @@ export default async function PastEvents() {
           </p>
         ) : (
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {events.map((event) => (
-              <div
-                key={event._id}
-                className="group bg-white rounded-lg overflow-hidden border border-rule transition-all duration-200 hover:-translate-y-1 hover:shadow-md"
-              >
-                {event.coverImage && (
-                  <div className="relative w-full aspect-4/3 overflow-hidden">
-                    <Image
-                      src={urlFor(event.coverImage).width(600).height(450).url()}
-                      alt={event.title}
-                      fill
-                      sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                      className="object-cover transition-transform duration-300 group-hover:scale-105"
-                    />
-                  </div>
-                )}
-                <div className="p-5">
-                  <p className="font-body text-[13px] tracking-[0.08em] uppercase text-gold-dark">
-                    {formatDate(event.date)}
-                  </p>
-                  <h3 className="font-heading text-[19px] leading-[1.35] font-semibold text-navy mt-2">
-                    {event.title}
-                  </h3>
-                  {event.description && (
-                    <p className="font-body text-[16px] text-navy/70 leading-[1.65] mt-2">
-                      {event.description}
-                    </p>
+            {events.map((event, i) => (
+              <Reveal key={event._id} delay={(i % 3) * 80}>
+                <div className="group bg-white rounded-lg overflow-hidden border border-rule transition-all duration-200 hover:-translate-y-1 hover:shadow-md">
+                  {event.coverImage && (
+                    <div className="relative w-full aspect-4/3 overflow-hidden">
+                      <Image
+                        src={urlFor(event.coverImage).width(600).height(450).url()}
+                        alt={event.title}
+                        fill
+                        sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                        className="object-cover transition-transform duration-300 group-hover:scale-105"
+                      />
+                    </div>
                   )}
+                  <div className="p-5">
+                    <p className="font-body text-[13px] tracking-[0.08em] uppercase text-gold-dark">
+                      {formatDate(event.date)}
+                    </p>
+                    <h3 className="font-heading text-[19px] leading-[1.35] font-semibold text-navy mt-2">
+                      {event.title}
+                    </h3>
+                    {event.description && (
+                      <p className="font-body text-[16px] text-navy/70 leading-[1.65] mt-2">
+                        {event.description}
+                      </p>
+                    )}
+                  </div>
                 </div>
-              </div>
+              </Reveal>
             ))}
           </div>
         )}

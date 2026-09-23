@@ -1,3 +1,5 @@
+import Reveal from "../Reveal";
+
 const categories = [
   {
     title: "Business Exhibitions",
@@ -39,18 +41,17 @@ export default function EventCategories() {
           What to Expect
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-          {categories.map((category) => (
-            <div
-              key={category.title}
-              className="bg-white rounded-lg p-6 md:p-8 border-t-4 border-gold transition-all duration-200 hover:-translate-y-1 hover:shadow-md"
-            >
-              <h3 className="font-heading text-[19px] md:text-[21px] leading-[1.35] font-semibold text-navy mb-2">
-                {category.title}
-              </h3>
-              <p className="font-body text-[16px] text-navy/70 leading-[1.65]">
-                {category.description}
-              </p>
-            </div>
+          {categories.map((category, i) => (
+            <Reveal key={category.title} delay={i * 80}>
+              <div className="bg-white rounded-lg p-6 md:p-8 border-t-4 border-gold transition-all duration-200 hover:-translate-y-1 hover:shadow-md">
+                <h3 className="font-heading text-[19px] md:text-[21px] leading-[1.35] font-semibold text-navy mb-2">
+                  {category.title}
+                </h3>
+                <p className="font-body text-[16px] text-navy/70 leading-[1.65]">
+                  {category.description}
+                </p>
+              </div>
+            </Reveal>
           ))}
         </div>
       </div>

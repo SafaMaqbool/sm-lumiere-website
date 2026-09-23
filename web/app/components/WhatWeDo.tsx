@@ -1,3 +1,5 @@
+import Reveal from "./Reveal";
+
 const services = [
   {
     title: "Business Exhibitions & Expos",
@@ -39,22 +41,23 @@ export default function WhatWeDo() {
           What We Do
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-          {services.map((service) => (
-            <div
-              key={service.title}
-              className={`bg-cream rounded-lg p-5 md:p-6 border-t-4 text-center transition-all duration-200 hover:-translate-y-1 hover:shadow-md ${
-                service.flagship ? "border-gold" : "border-rule"
-              }`}
-            >
-              <p className="font-body text-[19px] md:text-[21px] leading-[1.35] text-navy wrap-break-word">
-                {service.title}
-              </p>
-              {service.description && (
-                <p className="font-body text-[16px] text-navy/70 leading-[1.65] mt-2">
-                  {service.description}
+          {services.map((service, i) => (
+            <Reveal key={service.title} delay={i * 80}>
+              <div
+                className={`bg-cream rounded-lg p-5 md:p-6 border-t-4 text-center transition-all duration-200 hover:-translate-y-1 hover:shadow-md ${
+                  service.flagship ? "border-gold" : "border-rule"
+                }`}
+              >
+                <p className="font-body text-[19px] md:text-[21px] leading-[1.35] text-navy wrap-break-word">
+                  {service.title}
                 </p>
-              )}
-            </div>
+                {service.description && (
+                  <p className="font-body text-[16px] text-navy/70 leading-[1.65] mt-2">
+                    {service.description}
+                  </p>
+                )}
+              </div>
+            </Reveal>
           ))}
         </div>
       </div>

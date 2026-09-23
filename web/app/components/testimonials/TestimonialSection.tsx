@@ -1,6 +1,7 @@
 import Image from "next/image";
 import type { Testimonial } from "@/sanity/queries";
 import { urlFor } from "@/sanity/image";
+import Reveal from "../Reveal";
 
 type TestimonialSectionProps = {
   background: "white" | "cream";
@@ -37,38 +38,39 @@ export default function TestimonialSection({
           </p>
         ) : (
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {items.map((item) => (
-              <div
-                key={item._id}
-                className={`${cardFill} rounded-lg p-6 border-t-4 border-gold flex flex-col transition-all duration-200 hover:-translate-y-1 hover:shadow-md`}
-              >
-                <p className="font-body text-[16px] text-navy/80 leading-[1.65] grow">
-                  &ldquo;{item.quote}&rdquo;
-                </p>
-                <div className="flex items-center gap-3 mt-6">
-                  {item.photo && (
-                    <div className="relative w-11 h-11 rounded-full overflow-hidden shrink-0">
-                      <Image
-                        src={urlFor(item.photo).width(88).height(88).url()}
-                        alt={item.name}
-                        fill
-                        sizes="44px"
-                        className="object-cover"
-                      />
-                    </div>
-                  )}
-                  <div>
-                    <p className="font-body font-semibold text-[16px] text-navy">
-                      {item.name}
-                    </p>
-                    {item.role && (
-                      <p className="font-body text-[13px] text-navy/60">
-                        {item.role}
-                      </p>
+            {items.map((item, i) => (
+              <Reveal key={item._id} delay={(i % 3) * 80}>
+                <div
+                  className={`${cardFill} rounded-lg p-6 border-t-4 border-gold flex flex-col transition-all duration-200 hover:-translate-y-1 hover:shadow-md`}
+                >
+                  <p className="font-body text-[16px] text-navy/80 leading-[1.65] grow">
+                    &ldquo;{item.quote}&rdquo;
+                  </p>
+                  <div className="flex items-center gap-3 mt-6">
+                    {item.photo && (
+                      <div className="relative w-11 h-11 rounded-full overflow-hidden shrink-0">
+                        <Image
+                          src={urlFor(item.photo).width(88).height(88).url()}
+                          alt={item.name}
+                          fill
+                          sizes="44px"
+                          className="object-cover"
+                        />
+                      </div>
                     )}
+                    <div>
+                      <p className="font-body font-semibold text-[16px] text-navy">
+                        {item.name}
+                      </p>
+                      {item.role && (
+                        <p className="font-body text-[13px] text-navy/60">
+                          {item.role}
+                        </p>
+                      )}
+                    </div>
                   </div>
                 </div>
-              </div>
+              </Reveal>
             ))}
           </div>
         )}

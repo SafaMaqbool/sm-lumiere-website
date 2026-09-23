@@ -1,3 +1,5 @@
+import Reveal from "../Reveal";
+
 const services = [
   {
     title: "Mindset Coaching",
@@ -49,18 +51,17 @@ export default function TrainingServices() {
           Our Training &amp; Coaching Services
         </h2>
         <div className="grid sm:grid-cols-2 gap-4 md:gap-6">
-          {services.map((service) => (
-            <div
-              key={service.title}
-              className="bg-white rounded-lg p-6 border-t-4 border-gold flex flex-col transition-all duration-200 hover:-translate-y-1 hover:shadow-md"
-            >
-              <h3 className="font-heading text-[19px] leading-[1.35] font-semibold text-navy mb-2">
-                {service.title}
-              </h3>
-              <p className="font-body text-[16px] text-navy/70 leading-[1.65]">
-                {service.description}
-              </p>
-            </div>
+          {services.map((service, i) => (
+            <Reveal key={service.title} delay={(i % 2) * 100}>
+              <div className="bg-white rounded-lg p-6 border-t-4 border-gold flex flex-col transition-all duration-200 hover:-translate-y-1 hover:shadow-md">
+                <h3 className="font-heading text-[19px] leading-[1.35] font-semibold text-navy mb-2">
+                  {service.title}
+                </h3>
+                <p className="font-body text-[16px] text-navy/70 leading-[1.65]">
+                  {service.description}
+                </p>
+              </div>
+            </Reveal>
           ))}
         </div>
       </div>

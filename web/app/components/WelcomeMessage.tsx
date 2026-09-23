@@ -1,7 +1,9 @@
+import Reveal from "./Reveal";
+
 export default function WelcomeMessage() {
   return (
     <section className="bg-cream py-14 md:py-24">
-      <div className="max-w-2xl mx-auto px-6">
+      <Reveal className="max-w-2xl mx-auto px-6">
         <span className="font-body text-[13px] tracking-[0.08em] uppercase text-gold-dark">
           Welcome
         </span>
@@ -19,7 +21,7 @@ export default function WelcomeMessage() {
           businesses, and communities to inspire collaboration, innovation,
           and lasting success.
         </p>
-      </div>
+      </Reveal>
     </section>
   );
 }

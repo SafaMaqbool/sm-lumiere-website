@@ -9,10 +9,10 @@ type ButtonProps = {
 } & Omit<ComponentProps<typeof Link>, "href" | "className">;
 
 const base =
-  "inline-flex items-center justify-center w-full max-w-100 sm:w-auto text-center font-body font-medium px-8 py-3.5 rounded-full transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2";
+  "inline-flex items-center justify-center w-full max-w-100 sm:w-auto text-center font-body font-medium px-8 py-3.5 rounded-full transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2";
 
 const variants = {
-  primary: "bg-gold text-navy hover:bg-navy hover:text-gold",
+  primary: "bg-gold text-navy hover:bg-gold-dark",
   secondary: "border border-navy text-navy hover:bg-navy hover:text-white",
 };
 

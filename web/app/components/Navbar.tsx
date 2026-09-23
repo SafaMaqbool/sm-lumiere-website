@@ -21,9 +21,31 @@ const links = [
 export default function Navbar() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [headerHeight, setHeaderHeight] = useState(68);
+  const headerRef = useRef<HTMLElement>(null);
   const panelRef = useRef<HTMLDivElement>(null);
   const toggleRef = useRef<HTMLButtonElement>(null);
   const firstLinkRef = useRef<HTMLAnchorElement>(null);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 4);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  useEffect(() => {
+    const el = headerRef.current;
+    if (!el) return;
+
+    const measure = () => setHeaderHeight(el.getBoundingClientRect().height);
+    measure();
+
+    const observer = new ResizeObserver(measure);
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
     if (!open) return;
@@ -66,7 +88,12 @@ export default function Navbar() {
   const closeMenu = () => setOpen(false);
 
   return (
-    <header className="bg-ink text-white sticky top-0 z-50">
+    <header
+      ref={headerRef}
+      className={`bg-ink text-white sticky top-0 z-50 border-b-2 border-gold transition-shadow duration-300 ${
+        scrolled ? "shadow-lg shadow-black/20" : ""
+      }`}
+    >
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
         <Link
           href="/"
@@ -128,7 +155,8 @@ export default function Navbar() {
 
       {open && (
         <div
-          className="fixed inset-0 top-17 z-40 bg-black/40 xl:hidden"
+          className="fixed inset-0 z-40 bg-black/40 xl:hidden"
+          style={{ top: headerHeight }}
           onClick={closeMenu}
           aria-hidden="true"
         />
@@ -138,7 +166,8 @@ export default function Navbar() {
         <nav
           id="mobile-nav-panel"
           ref={panelRef}
-          className="xl:hidden fixed inset-x-0 top-17 z-50 bg-ink border-t border-white/10 px-6 py-6 flex flex-col gap-5 font-body text-[19px] overflow-y-auto max-h-[calc(100vh-68px)]"
+          className="xl:hidden fixed inset-x-0 z-50 bg-ink border-t border-white/10 px-6 py-6 flex flex-col gap-5 font-body text-[19px] overflow-y-auto"
+          style={{ top: headerHeight, maxHeight: `calc(100vh - ${headerHeight}px)` }}
         >
           {links.map((link, i) => {
             const isActive =

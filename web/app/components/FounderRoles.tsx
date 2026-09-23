@@ -1,3 +1,5 @@
+import Reveal from "./Reveal";
+
 const roles = [
   {
     title: "Entrepreneur & Businesswoman",
@@ -32,18 +34,17 @@ export default function FounderRoles() {
           <div className="w-12 h-px bg-gold mx-auto mt-3" />
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
-          {roles.map((role) => (
-            <div
-              key={role.title}
-              className="bg-white rounded-lg p-6 md:p-8 shadow-sm border-t-4 border-gold transition-all duration-200 hover:-translate-y-1 hover:shadow-md"
-            >
-              <h2 className="font-heading text-lg md:text-xl font-semibold text-navy mb-3">
-                {role.title}
-              </h2>
-              <p className="font-body text-sm md:text-base text-navy/70 leading-relaxed">
-                {role.description}
-              </p>
-            </div>
+          {roles.map((role, i) => (
+            <Reveal key={role.title} delay={(i % 2) * 100}>
+              <div className="bg-white rounded-lg p-6 md:p-8 shadow-sm border-t-4 border-gold transition-all duration-200 hover:-translate-y-1 hover:shadow-md">
+                <h2 className="font-heading text-lg md:text-xl font-semibold text-navy mb-3">
+                  {role.title}
+                </h2>
+                <p className="font-body text-sm md:text-base text-navy/70 leading-relaxed">
+                  {role.description}
+                </p>
+              </div>
+            </Reveal>
           ))}
         </div>
       </div>

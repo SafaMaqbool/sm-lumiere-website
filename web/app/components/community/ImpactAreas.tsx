@@ -1,3 +1,5 @@
+import Reveal from "../Reveal";
+
 const areas = [
   {
     title: "Empowering Women",
@@ -51,18 +53,17 @@ export default function ImpactAreas() {
     <section className="bg-cream py-14 md:py-24">
       <div className="max-w-5xl mx-auto px-4 md:px-6">
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-          {areas.map((area) => (
-            <div
-              key={area.title}
-              className="bg-white rounded-lg p-6 border-t-4 border-gold flex flex-col transition-all duration-200 hover:-translate-y-1 hover:shadow-md"
-            >
-              <h2 className="font-heading text-[19px] leading-[1.35] font-semibold text-navy mb-2">
-                {area.title}
-              </h2>
-              <p className="font-body text-[16px] text-navy/70 leading-[1.65]">
-                {area.description}
-              </p>
-            </div>
+          {areas.map((area, i) => (
+            <Reveal key={area.title} delay={(i % 3) * 80}>
+              <div className="bg-white rounded-lg p-6 border-t-4 border-gold flex flex-col transition-all duration-200 hover:-translate-y-1 hover:shadow-md">
+                <h2 className="font-heading text-[19px] leading-[1.35] font-semibold text-navy mb-2">
+                  {area.title}
+                </h2>
+                <p className="font-body text-[16px] text-navy/70 leading-[1.65]">
+                  {area.description}
+                </p>
+              </div>
+            </Reveal>
           ))}
         </div>
       </div>

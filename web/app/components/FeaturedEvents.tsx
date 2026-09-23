@@ -1,9 +1,10 @@
 import Button from "./Button";
+import Reveal from "./Reveal";
 
 export default function FeaturedEvents() {
   return (
     <section className="bg-cream py-14 md:py-24">
-      <div className="max-w-3xl mx-auto px-4 md:px-6">
+      <Reveal className="max-w-3xl mx-auto px-4 md:px-6">
         <h2 className="font-heading text-[27px] md:text-[36px] leading-[1.18] text-navy text-center">
           Discover Carefully Curated Experiences Designed to Connect,
           Educate, and Inspire
@@ -17,7 +18,7 @@ export default function FeaturedEvents() {
         <div className="mt-8 flex justify-center">
           <Button href="/events">Explore Events</Button>
         </div>
-      </div>
+      </Reveal>
     </section>
   );
 }

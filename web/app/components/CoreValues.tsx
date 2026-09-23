@@ -1,3 +1,5 @@
+import Reveal from "./Reveal";
+
 const values = [
   {
     title: "Empowerment",
@@ -44,18 +46,17 @@ export default function CoreValues() {
           Our Core Values
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
-          {values.map((value) => (
-            <div
-              key={value.title}
-              className="bg-cream rounded-lg p-6 shadow-sm border-t-4 border-gold transition-all duration-200 hover:-translate-y-1 hover:shadow-md"
-            >
-              <h3 className="font-heading text-lg font-semibold text-navy mb-2">
-                {value.title}
-              </h3>
-              <p className="font-body text-sm text-navy/70 leading-relaxed">
-                {value.description}
-              </p>
-            </div>
+          {values.map((value, i) => (
+            <Reveal key={value.title} delay={(i % 3) * 80}>
+              <div className="bg-cream rounded-lg p-6 shadow-sm border-t-4 border-gold transition-all duration-200 hover:-translate-y-1 hover:shadow-md">
+                <h3 className="font-heading text-lg font-semibold text-navy mb-2">
+                  {value.title}
+                </h3>
+                <p className="font-body text-sm text-navy/70 leading-relaxed">
+                  {value.description}
+                </p>
+              </div>
+            </Reveal>
           ))}
         </div>
       </div>

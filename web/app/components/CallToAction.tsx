@@ -1,9 +1,10 @@
 import Button from "./Button";
+import Reveal from "./Reveal";
 
 export default function CallToAction() {
   return (
     <section className="bg-cream py-18 md:py-28">
-      <div className="max-w-3xl mx-auto px-4 md:px-6 text-center">
+      <Reveal className="max-w-3xl mx-auto px-4 md:px-6 text-center">
         <h2 className="font-heading text-[27px] md:text-[36px] leading-[1.18] text-navy">
           Ready to Grow with SM Lumière?
         </h2>
@@ -24,7 +25,7 @@ export default function CallToAction() {
             Partner With Us
           </Button>
         </div>
-      </div>
+      </Reveal>
     </section>
   );
 }

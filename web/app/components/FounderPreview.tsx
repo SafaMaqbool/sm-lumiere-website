@@ -1,11 +1,12 @@
 import Image from "next/image";
 import Button from "./Button";
+import Reveal from "./Reveal";
 
 export default function FounderPreview() {
   return (
     <section className="bg-white py-14 md:py-24">
       <div className="max-w-5xl mx-auto px-4 md:px-6 grid md:grid-cols-2 gap-10 md:gap-16 items-center">
-        <div className="order-2 md:order-1 relative w-full aspect-4/5 rounded-lg overflow-hidden">
+        <Reveal className="order-2 md:order-1 relative w-full aspect-4/5 rounded-lg overflow-hidden">
           <Image
             src="/images/Shagufta-pic-5.jpg"
             alt="Shagufta Munaf, Founder of SM Lumière"
@@ -13,9 +14,9 @@ export default function FounderPreview() {
             sizes="(min-width: 768px) 50vw, 100vw"
             className="object-cover"
           />
-        </div>
+        </Reveal>
 
-        <div className="order-1 md:order-2 text-center md:text-left">
+        <Reveal delay={120} className="order-1 md:order-2 text-center md:text-left">
           <span className="font-body text-[13px] tracking-[0.08em] uppercase text-gold-dark">
             Meet the Founder
           </span>
@@ -35,7 +36,7 @@ export default function FounderPreview() {
               Learn More About the Founder
             </Button>
           </div>
-        </div>
+        </Reveal>
       </div>
     </section>
   );
