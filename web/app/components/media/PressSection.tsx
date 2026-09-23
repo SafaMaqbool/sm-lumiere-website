@@ -1,6 +1,7 @@
 import Image from "next/image";
 import type { PressItem } from "@/sanity/queries";
 import { urlFor } from "@/sanity/image";
+import { formatDate } from "@/lib/formatDate";
 
 type PressSectionProps = {
   background: "white" | "cream";
@@ -9,15 +10,6 @@ type PressSectionProps = {
   emptyMessage: string;
   items: PressItem[];
 };
-
-function formatDate(date?: string) {
-  if (!date) return null;
-  return new Date(date).toLocaleDateString("en-US", {
-    day: "numeric",
-    month: "long",
-    year: "numeric",
-  });
-}
 
 export default function PressSection({
   background,

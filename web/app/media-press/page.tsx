@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import MediaHero from "../components/media/MediaHero";
+import PageHero from "../components/PageHero";
 import MediaIntro from "../components/media/MediaIntro";
 import PressSection from "../components/media/PressSection";
 import MediaGallery from "../components/media/MediaGallery";
@@ -9,7 +9,7 @@ import { getPressItems } from "@/sanity/queries";
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: "Media & Press | SM Lumière",
+  title: "Media & Press",
   description:
     "Interviews, press features, and awards & recognition for SM Lumière and Founder Shagufta Munaf.",
 };
@@ -21,7 +21,12 @@ export default async function MediaPressPage() {
 
   return (
     <main>
-      <MediaHero />
+      <PageHero
+        background="cream"
+        eyebrow="Media & Press"
+        heading="Media & Press"
+        subheading="Sharing Our Journey. Celebrating Our Impact."
+      />
       <MediaIntro />
       <PressSection
         background="cream"

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import EventsHero from "../components/events/EventsHero";
+import PageHero from "../components/PageHero";
 import EventCategories from "../components/events/EventCategories";
 import UpcomingEvents from "../components/events/UpcomingEvents";
 import PastEvents from "../components/events/PastEvents";
@@ -9,7 +9,7 @@ import CallToAction from "../components/CallToAction";
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: "Events | SM Lumière",
+  title: "Events",
   description:
     "SM Lumière events — business exhibitions, networking evenings, workshops, business forums, and community meetups.",
 };
@@ -17,7 +17,11 @@ export const metadata: Metadata = {
 export default function EventsPage() {
   return (
     <main>
-      <EventsHero />
+      <PageHero
+        eyebrow="Events"
+        heading="SM Lumière Events"
+        subheading="Connecting People. Inspiring Growth. Creating Opportunities."
+      />
       <EventCategories />
       <UpcomingEvents />
       <PastEvents />

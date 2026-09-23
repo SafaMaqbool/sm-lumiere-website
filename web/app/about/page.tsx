@@ -9,7 +9,7 @@ import WhyFounded from "../components/WhyFounded";
 import CallToAction from "../components/CallToAction";
 
 export const metadata: Metadata = {
-  title: "About | SM Lumière",
+  title: "About",
   description:
     "Learn the story, purpose, vision, and values behind SM Lumière — a platform empowering entrepreneurs, creatives, and home-based businesses.",
 };

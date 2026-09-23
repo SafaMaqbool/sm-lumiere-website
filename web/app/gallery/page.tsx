@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import GalleryHero from "../components/gallery/GalleryHero";
+import PageHero from "../components/PageHero";
 import GalleryIntro from "../components/gallery/GalleryIntro";
 import GalleryTextSection from "../components/gallery/GalleryTextSection";
 import GalleryPhotos from "../components/gallery/GalleryPhotos";
@@ -8,7 +8,7 @@ import CallToAction from "../components/CallToAction";
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: "Gallery | SM Lumière",
+  title: "Gallery",
   description:
     "Photos and highlights from SM Lumière exhibitions, workshops, and networking events.",
 };
@@ -16,7 +16,10 @@ export const metadata: Metadata = {
 export default function GalleryPage() {
   return (
     <main>
-      <GalleryHero />
+      <PageHero
+        eyebrow="Gallery"
+        heading="Capturing Moments. Celebrating Success. Inspiring Connections."
+      />
       <GalleryIntro />
       <GalleryTextSection background="white" heading="Event Highlights">
         Explore the memorable moments from our signature events, featuring

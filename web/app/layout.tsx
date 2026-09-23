@@ -16,8 +16,13 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "SM Lumière",
-  description: "SM Lumière — Fashion & Beauty",
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"),
+  title: {
+    default: "SM Lumière",
+    template: "%s | SM Lumière",
+  },
+  description:
+    "SM Lumière is a purpose-driven platform empowering entrepreneurs, home-based businesses, and emerging talent through events, training, and community.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

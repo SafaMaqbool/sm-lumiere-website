@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import TrainingHero from "../components/training/TrainingHero";
+import PageHero from "../components/PageHero";
 import TrainingIntro from "../components/training/TrainingIntro";
 import TrainingPhilosophy from "../components/training/TrainingPhilosophy";
 import TrainingServices from "../components/training/TrainingServices";
@@ -9,7 +9,7 @@ import OurCommitment from "../components/training/OurCommitment";
 import CallToAction from "../components/CallToAction";
 
 export const metadata: Metadata = {
-  title: "Training & Coaching | SM Lumière",
+  title: "Training & Coaching",
   description:
     "SM Lumière's mindset coaching, business coaching, leadership development, and entrepreneurship training programs.",
 };
@@ -17,7 +17,10 @@ export const metadata: Metadata = {
 export default function TrainingPage() {
   return (
     <main>
-      <TrainingHero />
+      <PageHero
+        eyebrow="Training & Coaching"
+        heading="Transforming Mindsets. Developing Leaders. Building Successful Entrepreneurs."
+      />
       <TrainingIntro />
       <TrainingPhilosophy />
       <TrainingServices />

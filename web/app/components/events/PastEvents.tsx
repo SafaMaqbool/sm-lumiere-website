@@ -1,14 +1,7 @@
 import Image from "next/image";
 import { getPastEvents } from "@/sanity/queries";
 import { urlFor } from "@/sanity/image";
-
-function formatDate(date: string) {
-  return new Date(date).toLocaleDateString("en-US", {
-    day: "numeric",
-    month: "long",
-    year: "numeric",
-  });
-}
+import { formatDate } from "@/lib/formatDate";
 
 export default async function PastEvents() {
   const events = await getPastEvents();

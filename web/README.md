@@ -29,6 +29,14 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
+## Environment Variables
+
+| Variable | Required | Purpose |
+|---|---|---|
+| `NEXT_PUBLIC_SANITY_PROJECT_ID` | Yes | Connects the site to the Sanity dataset (events, testimonials, gallery, partners, press) |
+| `NEXT_PUBLIC_SANITY_DATASET` | Yes | Sanity dataset name (currently `production`) |
+| `NEXT_PUBLIC_SITE_URL` | **Before deploying** | Base URL used for `sitemap.xml`, `robots.txt`, and Open Graph/canonical links. Falls back to `http://localhost:3000` if unset — **set this to the real production domain (e.g. `https://smlumiere.com`) on the hosting platform (Vercel env vars) before/when going live**, otherwise the sitemap and social previews will point at localhost. |
+
 ## Deploy on Vercel
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.

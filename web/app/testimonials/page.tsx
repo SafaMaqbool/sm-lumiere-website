@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import TestimonialsHero from "../components/testimonials/TestimonialsHero";
+import PageHero from "../components/PageHero";
 import TestimonialsIntro from "../components/testimonials/TestimonialsIntro";
 import TestimonialSection from "../components/testimonials/TestimonialSection";
 import SuccessStories from "../components/testimonials/SuccessStories";
@@ -9,7 +9,7 @@ import { getTestimonials } from "@/sanity/queries";
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: "Testimonials | SM Lumière",
+  title: "Testimonials",
   description:
     "What participants, vendors, sponsors, and clients say about SM Lumière events and programs.",
 };
@@ -21,7 +21,10 @@ export default async function TestimonialsPage() {
 
   return (
     <main>
-      <TestimonialsHero />
+      <PageHero
+        eyebrow="Testimonials"
+        heading="Real Experiences. Real Success. Real Impact."
+      />
       <TestimonialsIntro />
       <TestimonialSection
         background="white"

@@ -8,7 +8,7 @@ import FounderMessage from "../components/FounderMessage";
 import CallToAction from "../components/CallToAction";
 
 export const metadata: Metadata = {
-  title: "Meet Shagufta Munaf | SM Lumière",
+  title: "Meet Shagufta Munaf",
   description:
     "Meet Shagufta Munaf, Founder & CEO of SM Lumière — entrepreneur, speaker, trainer, mindset coach, and community builder empowering entrepreneurs and communities.",
 };

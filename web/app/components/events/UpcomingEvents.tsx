@@ -2,14 +2,7 @@ import Image from "next/image";
 import Button from "../Button";
 import { getUpcomingEvents } from "@/sanity/queries";
 import { urlFor } from "@/sanity/image";
-
-function formatDate(date: string) {
-  return new Date(date).toLocaleDateString("en-US", {
-    day: "numeric",
-    month: "long",
-    year: "numeric",
-  });
-}
+import { formatDate } from "@/lib/formatDate";
 
 export default async function UpcomingEvents() {
   const events = await getUpcomingEvents();

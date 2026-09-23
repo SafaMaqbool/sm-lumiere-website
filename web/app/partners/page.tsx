@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import PartnersHero from "../components/partners/PartnersHero";
+import PageHero from "../components/PageHero";
 import PartnersIntro from "../components/partners/PartnersIntro";
 import PartnerSection from "../components/partners/PartnerSection";
 import CollaborationCTA from "../components/partners/CollaborationCTA";
@@ -8,7 +8,7 @@ import { getPartners } from "@/sanity/queries";
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: "Partners & Sponsors | SM Lumière",
+  title: "Partners & Sponsors",
   description: "SM Lumière's brand partners and event sponsors.",
 };
 
@@ -19,7 +19,12 @@ export default async function PartnersPage() {
 
   return (
     <main>
-      <PartnersHero />
+      <PageHero
+        background="cream"
+        eyebrow="Partners & Sponsors"
+        heading="Partners & Sponsors"
+        subheading="Building Meaningful Partnerships That Create Lasting Impact."
+      />
       <PartnersIntro />
       <PartnerSection
         background="cream"
