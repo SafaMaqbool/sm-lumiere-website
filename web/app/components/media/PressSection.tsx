@@ -41,16 +41,16 @@ export default function PressSection({
             {items.map((item) => {
               const card = (
                 <div
-                  className={`${cardFill} rounded-lg overflow-hidden border-t-4 border-gold h-full flex flex-col`}
+                  className={`group ${cardFill} rounded-lg overflow-hidden border-t-4 border-gold h-full flex flex-col transition-all duration-200 hover:-translate-y-1 hover:shadow-md`}
                 >
                   {item.thumbnail && (
-                    <div className="relative w-full aspect-4/3">
+                    <div className="relative w-full aspect-4/3 overflow-hidden">
                       <Image
                         src={urlFor(item.thumbnail).width(600).height(450).url()}
                         alt={item.title}
                         fill
                         sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                        className="object-cover"
+                        className="object-cover transition-transform duration-300 group-hover:scale-105"
                       />
                     </div>
                   )}
@@ -70,13 +70,7 @@ export default function PressSection({
               );
 
               return item.link ? (
-                <a
-                  key={item._id}
-                  href={item.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block hover:opacity-90 transition-opacity"
-                >
+                <a key={item._id} href={item.link} target="_blank" rel="noopener noreferrer" className="block">
                   {card}
                 </a>
               ) : (

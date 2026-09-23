@@ -52,7 +52,7 @@ export default function TrainingServices() {
           {services.map((service) => (
             <div
               key={service.title}
-              className="bg-white rounded-lg p-6 border-t-4 border-gold flex flex-col"
+              className="bg-white rounded-lg p-6 border-t-4 border-gold flex flex-col transition-all duration-200 hover:-translate-y-1 hover:shadow-md"
             >
               <h3 className="font-heading text-[19px] leading-[1.35] font-semibold text-navy mb-2">
                 {service.title}

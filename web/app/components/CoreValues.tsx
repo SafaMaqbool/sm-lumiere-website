@@ -47,7 +47,7 @@ export default function CoreValues() {
           {values.map((value) => (
             <div
               key={value.title}
-              className="bg-cream rounded-lg p-6 shadow-sm border-t-4 border-gold"
+              className="bg-cream rounded-lg p-6 shadow-sm border-t-4 border-gold transition-all duration-200 hover:-translate-y-1 hover:shadow-md"
             >
               <h3 className="font-heading text-lg font-semibold text-navy mb-2">
                 {value.title}

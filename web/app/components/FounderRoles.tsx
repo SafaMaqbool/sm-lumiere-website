@@ -35,7 +35,7 @@ export default function FounderRoles() {
           {roles.map((role) => (
             <div
               key={role.title}
-              className="bg-white rounded-lg p-6 md:p-8 shadow-sm border-t-4 border-gold"
+              className="bg-white rounded-lg p-6 md:p-8 shadow-sm border-t-4 border-gold transition-all duration-200 hover:-translate-y-1 hover:shadow-md"
             >
               <h2 className="font-heading text-lg md:text-xl font-semibold text-navy mb-3">
                 {role.title}

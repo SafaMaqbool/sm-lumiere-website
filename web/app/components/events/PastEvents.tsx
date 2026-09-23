@@ -21,15 +21,18 @@ export default async function PastEvents() {
         ) : (
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {events.map((event) => (
-              <div key={event._id} className="bg-white rounded-lg overflow-hidden border border-rule">
+              <div
+                key={event._id}
+                className="group bg-white rounded-lg overflow-hidden border border-rule transition-all duration-200 hover:-translate-y-1 hover:shadow-md"
+              >
                 {event.coverImage && (
-                  <div className="relative w-full aspect-4/3">
+                  <div className="relative w-full aspect-4/3 overflow-hidden">
                     <Image
                       src={urlFor(event.coverImage).width(600).height(450).url()}
                       alt={event.title}
                       fill
                       sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                      className="object-cover"
+                      className="object-cover transition-transform duration-300 group-hover:scale-105"
                     />
                   </div>
                 )}

@@ -35,7 +35,7 @@ export default function PartnerSection({
             {items.map((item) => {
               const logo = (
                 <div
-                  className={`${cardFill} rounded-lg border border-rule flex items-center justify-center p-6 h-28`}
+                  className={`${cardFill} rounded-lg border border-rule flex items-center justify-center p-6 h-28 transition-all duration-200 hover:-translate-y-1 hover:shadow-md hover:border-gold`}
                 >
                   <div className="relative w-full h-full">
                     <Image
@@ -55,7 +55,6 @@ export default function PartnerSection({
                   href={item.website}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:opacity-80 transition-opacity"
                 >
                   {logo}
                 </a>

@@ -35,7 +35,10 @@ export default function Footer() {
           <ul className="mt-4 grid grid-cols-2 gap-x-6 gap-y-3 font-body text-[16px] text-white/80">
             {sitemap.map((link) => (
               <li key={link.href}>
-                <Link href={link.href} className="hover:text-gold transition-colors">
+                <Link
+                  href={link.href}
+                  className="rounded-sm hover:text-gold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-ink"
+                >
                   {link.label}
                 </Link>
               </li>
@@ -57,7 +60,7 @@ export default function Footer() {
                 key={social.label}
                 href={social.href}
                 aria-label={social.label}
-                className="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center hover:border-gold hover:text-gold transition-colors"
+                className="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center hover:border-gold hover:text-gold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-ink"
               >
                 <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
                   <path d={social.path} />

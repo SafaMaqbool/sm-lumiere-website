@@ -21,7 +21,7 @@ export default function WhoItsFor() {
           {audiences.map((audience) => (
             <span
               key={audience}
-              className="font-body text-[16px] text-navy bg-cream border border-rule rounded-full px-5 py-2.5"
+              className="font-body text-[16px] text-navy bg-cream border border-rule rounded-full px-5 py-2.5 transition-colors duration-200 hover:border-gold hover:bg-white"
             >
               {audience}
             </span>

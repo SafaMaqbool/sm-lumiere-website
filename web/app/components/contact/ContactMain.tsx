@@ -34,7 +34,7 @@ export default function ContactMain() {
                   key={social.label}
                   href={social.href}
                   aria-label={social.label}
-                  className="w-9 h-9 rounded-full border border-rule flex items-center justify-center text-navy hover:border-gold hover:text-gold-dark transition-colors"
+                  className="w-9 h-9 rounded-full border border-rule flex items-center justify-center text-navy hover:border-gold hover:text-gold-dark transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-dark focus-visible:ring-offset-2"
                 >
                   <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
                     <path d={social.path} />

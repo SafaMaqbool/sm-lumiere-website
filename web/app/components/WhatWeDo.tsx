@@ -42,7 +42,7 @@ export default function WhatWeDo() {
           {services.map((service) => (
             <div
               key={service.title}
-              className={`bg-cream rounded-lg p-5 md:p-6 border-t-4 text-center ${
+              className={`bg-cream rounded-lg p-5 md:p-6 border-t-4 text-center transition-all duration-200 hover:-translate-y-1 hover:shadow-md ${
                 service.flagship ? "border-gold" : "border-rule"
               }`}
             >

@@ -19,7 +19,7 @@ export default function TrainingPhilosophy() {
           {pillars.map((pillar) => (
             <div
               key={pillar}
-              className="bg-cream rounded-lg p-6 border-t-4 border-gold"
+              className="bg-cream rounded-lg p-6 border-t-4 border-gold transition-all duration-200 hover:-translate-y-1 hover:shadow-md"
             >
               <p className="font-body text-[19px] md:text-[21px] leading-[1.35] text-navy">
                 {pillar}

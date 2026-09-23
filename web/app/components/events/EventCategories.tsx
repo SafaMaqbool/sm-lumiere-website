@@ -42,7 +42,7 @@ export default function EventCategories() {
           {categories.map((category) => (
             <div
               key={category.title}
-              className="bg-white rounded-lg p-6 md:p-8 border-t-4 border-gold"
+              className="bg-white rounded-lg p-6 md:p-8 border-t-4 border-gold transition-all duration-200 hover:-translate-y-1 hover:shadow-md"
             >
               <h3 className="font-heading text-[19px] md:text-[21px] leading-[1.35] font-semibold text-navy mb-2">
                 {category.title}

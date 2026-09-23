@@ -40,7 +40,7 @@ export default function TestimonialSection({
             {items.map((item) => (
               <div
                 key={item._id}
-                className={`${cardFill} rounded-lg p-6 border-t-4 border-gold flex flex-col`}
+                className={`${cardFill} rounded-lg p-6 border-t-4 border-gold flex flex-col transition-all duration-200 hover:-translate-y-1 hover:shadow-md`}
               >
                 <p className="font-body text-[16px] text-navy/80 leading-[1.65] grow">
                   &ldquo;{item.quote}&rdquo;

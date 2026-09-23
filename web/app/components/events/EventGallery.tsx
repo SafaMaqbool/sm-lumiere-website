@@ -28,7 +28,7 @@ export default async function EventGallery() {
                   alt={item.title}
                   fill
                   sizes="(min-width: 768px) 25vw, 50vw"
-                  className="object-cover"
+                  className="object-cover transition-transform duration-300 hover:scale-105"
                 />
               </div>
             ))}

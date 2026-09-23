@@ -31,16 +31,16 @@ export default async function UpcomingEvents() {
             {events.map((event) => (
               <div
                 key={event._id}
-                className="bg-cream rounded-lg overflow-hidden shadow-sm border-t-4 border-gold flex flex-col"
+                className="group bg-cream rounded-lg overflow-hidden shadow-sm border-t-4 border-gold flex flex-col transition-all duration-200 hover:-translate-y-1 hover:shadow-md"
               >
                 {event.coverImage && (
-                  <div className="relative w-full aspect-4/3">
+                  <div className="relative w-full aspect-4/3 overflow-hidden">
                     <Image
                       src={urlFor(event.coverImage).width(600).height(450).url()}
                       alt={event.title}
                       fill
                       sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                      className="object-cover"
+                      className="object-cover transition-transform duration-300 group-hover:scale-105"
                     />
                   </div>
                 )}
