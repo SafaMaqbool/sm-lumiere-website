@@ -46,7 +46,7 @@ export default function WhatWeDo() {
                 service.flagship ? "border-gold" : "border-rule"
               }`}
             >
-              <p className="font-body text-[19px] md:text-[21px] leading-[1.35] text-navy break-words">
+              <p className="font-body text-[19px] md:text-[21px] leading-[1.35] text-navy wrap-break-word">
                 {service.title}
               </p>
               {service.description && (
