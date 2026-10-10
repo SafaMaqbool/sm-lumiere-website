@@ -2,8 +2,16 @@ import Button from "./Button";
 
 export default function Hero() {
   return (
-    <section className="bg-white py-18 md:py-32">
-      <div className="max-w-5xl mx-auto px-6 text-center">
+    <section className="relative overflow-hidden bg-white py-18 md:py-32">
+      <div
+        className="pointer-events-none absolute left-1/2 top-0 z-0 h-160 w-225 -translate-x-1/2 -translate-y-1/3 rounded-full opacity-60"
+        style={{
+          background:
+            "radial-gradient(closest-side, rgba(212,175,55,0.16), rgba(212,175,55,0.05) 60%, transparent 80%)",
+        }}
+        aria-hidden="true"
+      />
+      <div className="relative max-w-5xl mx-auto px-6 text-center">
         <h1 className="animate-fade-in-up font-heading text-[34px] md:text-[56px] leading-[1.08] font-semibold text-navy">
           Empowering People. Elevating Businesses. Creating Opportunities.
         </h1>

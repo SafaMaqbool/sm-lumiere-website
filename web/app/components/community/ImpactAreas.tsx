@@ -1,50 +1,61 @@
+import { Heart, Home, Rocket, Star, Compass, TrendingUp, Wallet, Users, Network } from "lucide-react";
 import Reveal from "../Reveal";
+import CardIcon from "../CardIcon";
 
 const areas = [
   {
     title: "Empowering Women",
     description:
       "We are passionate about empowering women to become confident leaders, successful entrepreneurs, and independent professionals. Through networking, mentorship, education, and business opportunities, we encourage women to pursue their ambitions and achieve their full potential.",
+    icon: Heart,
   },
   {
     title: "Supporting Home-Based Businesses",
     description:
       "Many successful businesses begin at home. SM Lumière provides home-based entrepreneurs with a professional platform to showcase their products and services, increase brand visibility, connect with new customers, and expand their businesses with confidence.",
+    icon: Home,
   },
   {
     title: "Promoting Entrepreneurs",
     description:
       "We are committed to supporting entrepreneurs at every stage of their journey. Whether launching a new venture or scaling an existing business, we provide opportunities for learning, networking, collaboration, and business growth.",
+    icon: Rocket,
   },
   {
     title: "Showcasing Talent",
     description:
       "Every talent deserves recognition. We create opportunities for creatives, professionals, artisans, innovators, and emerging entrepreneurs to present their skills, ideas, and businesses to a wider audience, helping them gain visibility and unlock new possibilities.",
+    icon: Star,
   },
   {
     title: "Leadership Development",
     description:
       "Strong communities are built by strong leaders. Through coaching, workshops, mentorship, and educational initiatives, we help individuals develop confidence, communication, strategic thinking, and leadership skills that create lasting personal and professional impact.",
+    icon: Compass,
   },
   {
     title: "Business Growth & Opportunities",
     description:
       "Our platform connects entrepreneurs with customers, partners, industry professionals, and business leaders. By creating meaningful networking opportunities and collaborative experiences, we help businesses increase visibility, strengthen relationships, and discover new avenues for growth.",
+    icon: TrendingUp,
   },
   {
     title: "Encouraging Financial Independence",
     description:
       "We believe entrepreneurship can create lasting financial empowerment. By supporting small businesses, promoting innovation, and encouraging self-employment, we help individuals build sustainable income and long-term economic independence.",
+    icon: Wallet,
   },
   {
     title: "Community Building",
     description:
       "SM Lumière is more than a business platform—it is a growing community built on trust, collaboration, inclusivity, and shared success. We bring together individuals from diverse backgrounds who inspire, support, and learn from one another.",
+    icon: Users,
   },
   {
     title: "Networking & Collaboration",
     description:
       "Meaningful relationships create meaningful opportunities. Our events and initiatives are designed to connect entrepreneurs, professionals, creatives, and organisations, encouraging partnerships, knowledge-sharing, and long-term collaboration that benefits everyone involved.",
+    icon: Network,
   },
 ];
 
@@ -56,6 +67,7 @@ export default function ImpactAreas() {
           {areas.map((area, i) => (
             <Reveal key={area.title} delay={(i % 3) * 80}>
               <div className="bg-white rounded-lg p-6 border-t-4 border-gold flex flex-col transition-all duration-200 hover:-translate-y-1 hover:shadow-md">
+                <CardIcon icon={area.icon} />
                 <h2 className="font-heading text-[19px] leading-[1.35] font-semibold text-navy mb-2">
                   {area.title}
                 </h2>

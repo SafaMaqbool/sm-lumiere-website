@@ -1,40 +1,49 @@
+import { Sparkles, ShieldCheck, Award, Handshake, Lightbulb, Users, Target } from "lucide-react";
 import Reveal from "./Reveal";
+import CardIcon from "./CardIcon";
 
 const values = [
   {
     title: "Empowerment",
     description:
       "We believe in enabling individuals to realise their full potential through opportunity, education, and encouragement.",
+    icon: Sparkles,
   },
   {
     title: "Integrity",
     description:
       "We conduct our work with honesty, professionalism, transparency, and respect.",
+    icon: ShieldCheck,
   },
   {
     title: "Excellence",
     description:
       "We are committed to delivering high-quality experiences, meaningful events, and exceptional value to our community.",
+    icon: Award,
   },
   {
     title: "Collaboration",
     description:
       "We believe that strong partnerships and meaningful relationships create greater opportunities for everyone.",
+    icon: Handshake,
   },
   {
     title: "Innovation",
     description:
       "We encourage creativity, fresh ideas, and continuous learning to help individuals and businesses stay ahead.",
+    icon: Lightbulb,
   },
   {
     title: "Inclusivity",
     description:
       "We welcome people from diverse backgrounds, industries, and experiences, creating a community where everyone has the opportunity to grow.",
+    icon: Users,
   },
   {
     title: "Impact",
     description:
       "Every initiative we create is designed to make a positive and lasting difference for individuals, businesses, and communities.",
+    icon: Target,
   },
 ];
 
@@ -49,6 +58,7 @@ export default function CoreValues() {
           {values.map((value, i) => (
             <Reveal key={value.title} delay={(i % 3) * 80}>
               <div className="bg-cream rounded-lg p-6 shadow-sm border-t-4 border-gold transition-all duration-200 hover:-translate-y-1 hover:shadow-md">
+                <CardIcon icon={value.icon} />
                 <h3 className="font-heading text-lg font-semibold text-navy mb-2">
                   {value.title}
                 </h3>

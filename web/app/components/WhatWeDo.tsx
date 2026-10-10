@@ -1,34 +1,42 @@
+import { Building2, Users, GraduationCap, Rocket, Heart, Network } from "lucide-react";
 import Reveal from "./Reveal";
+import CardIcon from "./CardIcon";
 
 const services = [
   {
     title: "Business Exhibitions & Expos",
     description: "",
+    icon: Building2,
     flagship: true,
   },
   {
     title: "Networking Events",
     description: "",
+    icon: Users,
     flagship: false,
   },
   {
     title: "Workshops & Masterclasses",
     description: "",
+    icon: GraduationCap,
     flagship: false,
   },
   {
     title: "Entrepreneurship Development",
     description: "",
+    icon: Rocket,
     flagship: false,
   },
   {
     title: "Women Empowerment Initiatives",
     description: "",
+    icon: Heart,
     flagship: false,
   },
   {
     title: "Community Building & Strategic Networking",
     description: "",
+    icon: Network,
     flagship: true,
   },
 ];
@@ -48,6 +56,7 @@ export default function WhatWeDo() {
                   service.flagship ? "border-gold" : "border-rule"
                 }`}
               >
+                <CardIcon icon={service.icon} className="mx-auto" />
                 <p className="font-body text-[19px] md:text-[21px] leading-[1.35] text-navy wrap-break-word">
                   {service.title}
                 </p>

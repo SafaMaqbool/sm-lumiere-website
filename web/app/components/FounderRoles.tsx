@@ -1,25 +1,31 @@
+import { Briefcase, Mic, Brain, Users } from "lucide-react";
 import Reveal from "./Reveal";
+import CardIcon from "./CardIcon";
 
 const roles = [
   {
     title: "Entrepreneur & Businesswoman",
     description:
       "With a passion for entrepreneurship and business development, Shagufta believes that every successful business begins with a clear vision, continuous learning, and the courage to take action. Her work focuses on helping entrepreneurs strengthen their brands, expand their networks, increase business visibility, and unlock new opportunities for sustainable growth.",
+    icon: Briefcase,
   },
   {
     title: "Influencer & Speaker",
     description:
       "As an influencer and public speaker, Shagufta uses her platform to inspire, educate, and encourage aspiring entrepreneurs, professionals, and community members. Through her talks, events, and digital presence, she shares practical insights on entrepreneurship, leadership, confidence, personal growth, and building purpose-driven businesses.",
+    icon: Mic,
   },
   {
     title: "Trainer & Mindset Coach",
     description:
       "Shagufta believes that success begins with the right mindset. Through training programs, workshops, and mentorship, she empowers individuals to develop confidence, resilience, leadership, communication skills, and strategic thinking. Her coaching is designed to help people overcome self-doubt, embrace opportunities, and achieve both personal and professional growth.",
+    icon: Brain,
   },
   {
     title: "Community Builder",
     description:
       "Creating meaningful connections is at the heart of everything she does. Through SM Lumière, Shagufta has cultivated a community that encourages collaboration, supports entrepreneurship, promotes talented individuals, and creates opportunities for businesses and professionals to connect, learn, and grow together. Her commitment extends beyond business—she is passionate about empowering women, supporting home-based businesses, and fostering inclusive communities where everyone has the opportunity to succeed.",
+    icon: Users,
   },
 ];
 
@@ -37,6 +43,7 @@ export default function FounderRoles() {
           {roles.map((role, i) => (
             <Reveal key={role.title} delay={(i % 2) * 100}>
               <div className="bg-white rounded-lg p-6 md:p-8 shadow-sm border-t-4 border-gold transition-all duration-200 hover:-translate-y-1 hover:shadow-md">
+                <CardIcon icon={role.icon} />
                 <h2 className="font-heading text-lg md:text-xl font-semibold text-navy mb-3">
                   {role.title}
                 </h2>

@@ -1,45 +1,55 @@
+import { Brain, TrendingUp, Compass, Rocket, Sparkles, Network, Heart, GraduationCap } from "lucide-react";
 import Reveal from "../Reveal";
+import CardIcon from "../CardIcon";
 
 const services = [
   {
     title: "Mindset Coaching",
     description:
       "Develop a success-oriented mindset by overcoming self-doubt, building resilience, increasing self-confidence, and creating positive habits that lead to long-term personal and professional growth.",
+    icon: Brain,
   },
   {
     title: "Business Coaching",
     description:
       "Gain practical guidance on starting, growing, and strengthening your business. Learn how to build your brand, improve visibility, develop business strategies, and identify opportunities for sustainable growth.",
+    icon: TrendingUp,
   },
   {
     title: "Leadership Development",
     description:
       "Strengthen your ability to lead with confidence, integrity, and purpose. Our leadership programs focus on communication, decision-making, emotional intelligence, team building, and strategic thinking.",
+    icon: Compass,
   },
   {
     title: "Entrepreneurship Training",
     description:
       "Designed for aspiring and existing entrepreneurs, this program provides practical knowledge on business planning, branding, networking, customer engagement, business development, and entrepreneurial success.",
+    icon: Rocket,
   },
   {
     title: "Personal Development",
     description:
       "Personal growth is the foundation of professional success. Our programs help individuals improve confidence, communication, productivity, emotional resilience, goal setting, and self-leadership.",
+    icon: Sparkles,
   },
   {
     title: "Business Networking & Professional Growth",
     description:
       "Learn how to build meaningful relationships, expand your professional network, create valuable collaborations, and leverage networking as a powerful tool for business success.",
+    icon: Network,
   },
   {
     title: "Women's Leadership & Empowerment",
     description:
       "Supporting women in developing leadership skills, building successful businesses, increasing confidence, and creating meaningful opportunities for financial and personal growth.",
+    icon: Heart,
   },
   {
     title: "Workshops & Masterclasses",
     description:
       "Interactive learning experiences covering entrepreneurship, branding, business growth, leadership, mindset, communication, networking, and professional development.",
+    icon: GraduationCap,
   },
 ];
 
@@ -54,6 +64,7 @@ export default function TrainingServices() {
           {services.map((service, i) => (
             <Reveal key={service.title} delay={(i % 2) * 100}>
               <div className="bg-white rounded-lg p-6 border-t-4 border-gold flex flex-col transition-all duration-200 hover:-translate-y-1 hover:shadow-md">
+                <CardIcon icon={service.icon} />
                 <h3 className="font-heading text-[19px] leading-[1.35] font-semibold text-navy mb-2">
                   {service.title}
                 </h3>

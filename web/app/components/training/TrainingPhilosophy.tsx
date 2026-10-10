@@ -1,9 +1,11 @@
+import { Sprout, BookOpen, Compass } from "lucide-react";
 import Reveal from "../Reveal";
+import CardIcon from "../CardIcon";
 
 const pillars = [
-  "A Growth Mindset",
-  "Continuous Learning",
-  "Purpose-Driven Leadership",
+  { label: "A Growth Mindset", icon: Sprout },
+  { label: "Continuous Learning", icon: BookOpen },
+  { label: "Purpose-Driven Leadership", icon: Compass },
 ];
 
 export default function TrainingPhilosophy() {
@@ -19,10 +21,11 @@ export default function TrainingPhilosophy() {
 
         <div className="grid sm:grid-cols-3 gap-4 md:gap-6 mt-10">
           {pillars.map((pillar, i) => (
-            <Reveal key={pillar} delay={i * 100}>
+            <Reveal key={pillar.label} delay={i * 100}>
               <div className="bg-cream rounded-lg p-6 border-t-4 border-gold transition-all duration-200 hover:-translate-y-1 hover:shadow-md">
+                <CardIcon icon={pillar.icon} className="mx-auto" />
                 <p className="font-body text-[19px] md:text-[21px] leading-[1.35] text-navy">
-                  {pillar}
+                  {pillar.label}
                 </p>
               </div>
             </Reveal>

@@ -13,9 +13,17 @@ export default function PageHero({
 }: PageHeroProps) {
   return (
     <section
-      className={`${background === "white" ? "bg-white" : "bg-cream"} py-18 md:py-32`}
+      className={`relative overflow-hidden ${background === "white" ? "bg-white" : "bg-cream"} py-18 md:py-32`}
     >
-      <div className="max-w-3xl mx-auto px-6 text-center">
+      <div
+        className="pointer-events-none absolute left-1/2 top-0 z-0 h-120 w-180 -translate-x-1/2 -translate-y-1/3 rounded-full opacity-50"
+        style={{
+          background:
+            "radial-gradient(closest-side, rgba(212,175,55,0.14), rgba(212,175,55,0.04) 60%, transparent 80%)",
+        }}
+        aria-hidden="true"
+      />
+      <div className="relative max-w-3xl mx-auto px-6 text-center">
         <span className="animate-fade-in-up font-body text-[13px] tracking-[0.08em] uppercase text-gold-dark">
           {eyebrow}
         </span>
