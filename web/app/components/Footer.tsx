@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Mail, Phone } from "lucide-react";
 import { socialLinks } from "@/lib/socialLinks";
 
 const sitemap = [
@@ -51,8 +52,14 @@ export default function Footer() {
             Contact
           </p>
           <div className="mt-4 space-y-2 font-body text-[16px] text-white/80">
-            <p>hello@smlumiere.com</p>
-            <p>Coming soon</p>
+            <p className="flex items-center gap-2">
+              <Mail className="w-4 h-4 text-gold-dark shrink-0" strokeWidth={1.75} aria-hidden="true" />
+              hello@smlumiere.com
+            </p>
+            <p className="flex items-center gap-2 text-white/40 italic">
+              <Phone className="w-4 h-4 shrink-0" strokeWidth={1.75} aria-hidden="true" />
+              Phone coming soon
+            </p>
           </div>
           <div className="mt-6 flex gap-4">
             {socialLinks.map((social) => (

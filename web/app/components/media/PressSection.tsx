@@ -1,8 +1,10 @@
 import Image from "next/image";
+import { Newspaper } from "lucide-react";
 import type { PressItem } from "@/sanity/queries";
 import { urlFor } from "@/sanity/image";
 import { formatDate } from "@/lib/formatDate";
 import Reveal from "../Reveal";
+import EmptyState from "../EmptyState";
 
 type PressSectionProps = {
   background: "white" | "cream";
@@ -34,9 +36,7 @@ export default function PressSection({
         </p>
 
         {items.length === 0 ? (
-          <p className="max-w-xl mx-auto text-center font-body text-[16px] text-navy/70 leading-[1.65]">
-            {emptyMessage}
-          </p>
+          <EmptyState icon={Newspaper} message={emptyMessage} />
         ) : (
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {items.map((item, i) => {

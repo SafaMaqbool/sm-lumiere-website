@@ -1,4 +1,6 @@
 import Image from "next/image";
+import { Images } from "lucide-react";
+import EmptyState from "../EmptyState";
 import type { PressItem } from "@/sanity/queries";
 import { urlFor } from "@/sanity/image";
 
@@ -21,9 +23,7 @@ export default function MediaGallery({ items }: MediaGalleryProps) {
         </p>
 
         {withThumbnails.length === 0 ? (
-          <p className="max-w-xl mx-auto text-center font-body text-[16px] text-navy/70 leading-[1.65]">
-            Media assets will be added here soon.
-          </p>
+          <EmptyState icon={Images} message="Media assets will be added here soon." />
         ) : (
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {withThumbnails.map((item) => (

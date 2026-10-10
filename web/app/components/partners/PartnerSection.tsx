@@ -1,7 +1,9 @@
 import Image from "next/image";
+import { Handshake } from "lucide-react";
 import type { Partner } from "@/sanity/queries";
 import { urlFor } from "@/sanity/image";
 import Reveal from "../Reveal";
+import EmptyState from "../EmptyState";
 
 type PartnerSectionProps = {
   background: "white" | "cream";
@@ -28,9 +30,7 @@ export default function PartnerSection({
         </h2>
 
         {items.length === 0 ? (
-          <p className="max-w-xl mx-auto text-center font-body text-[16px] text-navy/70 leading-[1.65]">
-            {emptyMessage}
-          </p>
+          <EmptyState icon={Handshake} message={emptyMessage} />
         ) : (
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
             {items.map((item, i) => {

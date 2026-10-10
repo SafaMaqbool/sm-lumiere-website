@@ -1,3 +1,4 @@
+import { Mail, Phone, MessageCircle, MapPin } from "lucide-react";
 import ContactForm from "./ContactForm";
 import { socialLinks } from "@/lib/socialLinks";
 
@@ -17,10 +18,19 @@ export default function ContactMain() {
             <p className="font-body text-[13px] tracking-[0.08em] uppercase text-gold-dark mb-4">
               Contact Information
             </p>
-            <div className="space-y-2 font-body text-[16px] text-navy/80">
-              <p>hello@smlumiere.com</p>
-              <p>Coming soon</p>
-              <p>WhatsApp: Coming soon</p>
+            <div className="space-y-3 font-body text-[16px] text-navy/80">
+              <p className="flex items-center gap-3">
+                <Mail className="w-4 h-4 text-gold-dark shrink-0" strokeWidth={1.75} aria-hidden="true" />
+                hello@smlumiere.com
+              </p>
+              <p className="flex items-center gap-3 text-navy/50 italic">
+                <Phone className="w-4 h-4 shrink-0" strokeWidth={1.75} aria-hidden="true" />
+                Phone number coming soon
+              </p>
+              <p className="flex items-center gap-3 text-navy/50 italic">
+                <MessageCircle className="w-4 h-4 shrink-0" strokeWidth={1.75} aria-hidden="true" />
+                WhatsApp coming soon
+              </p>
             </div>
           </div>
 
@@ -48,8 +58,9 @@ export default function ContactMain() {
             <p className="font-body text-[13px] tracking-[0.08em] uppercase text-gold-dark mb-4">
               Location
             </p>
-            <p className="font-body text-[16px] text-navy/70 leading-[1.65]">
-              Location details coming soon.
+            <p className="flex items-center gap-3 font-body text-[16px] text-navy/50 italic">
+              <MapPin className="w-4 h-4 shrink-0" strokeWidth={1.75} aria-hidden="true" />
+              Location details coming soon
             </p>
           </div>
         </div>

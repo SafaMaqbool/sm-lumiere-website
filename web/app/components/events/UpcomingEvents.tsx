@@ -1,5 +1,7 @@
 import Image from "next/image";
+import { CalendarClock } from "lucide-react";
 import Button from "../Button";
+import EmptyState from "../EmptyState";
 import { getUpcomingEvents } from "@/sanity/queries";
 import { urlFor } from "@/sanity/image";
 import { formatDate } from "@/lib/formatDate";
@@ -16,17 +18,11 @@ export default async function UpcomingEvents() {
         </h2>
 
         {events.length === 0 ? (
-          <div className="max-w-xl mx-auto text-center">
-            <p className="font-body text-[16px] text-navy/70 leading-[1.65]">
-              New events are being planned. Check back soon, or get in touch
-              to hear about SM Lumière&apos;s next event first.
-            </p>
-            <div className="mt-6 flex justify-center">
-              <Button href="/contact" variant="secondary">
-                Contact
-              </Button>
-            </div>
-          </div>
+          <EmptyState
+            icon={CalendarClock}
+            message="New events are being planned. Check back soon, or get in touch to hear about SM Lumière's next event first."
+            action={{ label: "Contact", href: "/contact" }}
+          />
         ) : (
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {events.map((event, i) => (

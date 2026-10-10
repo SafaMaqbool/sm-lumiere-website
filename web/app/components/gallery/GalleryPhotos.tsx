@@ -1,4 +1,6 @@
 import Image from "next/image";
+import { Images } from "lucide-react";
+import EmptyState from "../EmptyState";
 import { getGalleryItems } from "@/sanity/queries";
 import { urlFor } from "@/sanity/image";
 
@@ -20,9 +22,10 @@ export default async function GalleryPhotos() {
         </p>
 
         {items.length === 0 ? (
-          <p className="max-w-xl mx-auto text-center font-body text-[16px] text-navy/70 leading-[1.65]">
-            Photos from SM Lumière events will be added here soon.
-          </p>
+          <EmptyState
+            icon={Images}
+            message="Photos from SM Lumière events will be added here soon."
+          />
         ) : (
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {items.map((item) => (

@@ -1,4 +1,6 @@
 import Image from "next/image";
+import { Archive } from "lucide-react";
+import EmptyState from "../EmptyState";
 import { getPastEvents } from "@/sanity/queries";
 import { urlFor } from "@/sanity/image";
 import { formatDate } from "@/lib/formatDate";
@@ -15,10 +17,10 @@ export default async function PastEvents() {
         </h2>
 
         {events.length === 0 ? (
-          <p className="max-w-xl mx-auto text-center font-body text-[16px] text-navy/70 leading-[1.65]">
-            Our events archive will appear here once SM Lumière&apos;s first
-            events have taken place.
-          </p>
+          <EmptyState
+            icon={Archive}
+            message="Our events archive will appear here once SM Lumière's first events have taken place."
+          />
         ) : (
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {events.map((event, i) => (

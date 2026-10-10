@@ -1,7 +1,9 @@
 import Image from "next/image";
+import { MessageSquareQuote, Quote } from "lucide-react";
 import type { Testimonial } from "@/sanity/queries";
 import { urlFor } from "@/sanity/image";
 import Reveal from "../Reveal";
+import EmptyState from "../EmptyState";
 
 type TestimonialSectionProps = {
   background: "white" | "cream";
@@ -33,9 +35,7 @@ export default function TestimonialSection({
         </p>
 
         {items.length === 0 ? (
-          <p className="max-w-xl mx-auto text-center font-body text-[16px] text-navy/70 leading-[1.65]">
-            {emptyMessage}
-          </p>
+          <EmptyState icon={MessageSquareQuote} message={emptyMessage} />
         ) : (
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {items.map((item, i) => (
@@ -43,8 +43,13 @@ export default function TestimonialSection({
                 <div
                   className={`${cardFill} rounded-lg p-6 border-t-4 border-gold flex flex-col transition-all duration-200 hover:-translate-y-1 hover:shadow-md`}
                 >
+                  <Quote
+                    className="w-6 h-6 text-gold mb-3"
+                    strokeWidth={1.5}
+                    aria-hidden="true"
+                  />
                   <p className="font-body text-[16px] text-navy/80 leading-[1.65] grow">
-                    &ldquo;{item.quote}&rdquo;
+                    {item.quote}
                   </p>
                   <div className="flex items-center gap-3 mt-6">
                     {item.photo && (
