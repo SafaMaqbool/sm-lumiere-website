@@ -53,6 +53,7 @@ export type Book = {
   edition?: string;
   description: string;
   coverImage: SanityImageSource;
+  coverBlurDataURL?: string;
   previewFileUrl?: string;
   purchaseUrl?: string;
 };
@@ -83,7 +84,8 @@ const pressItemsQuery = `*[_type == "pressItem"] | order(date desc) {
 
 const booksQuery = `*[_type == "book"] | order(coalesce(order, 999) asc, _createdAt desc) {
   _id, title, subtitle, author, edition, description, coverImage, purchaseUrl,
-  "previewFileUrl": previewFile.asset->url
+  "previewFileUrl": previewFile.asset->url,
+  "coverBlurDataURL": coverImage.asset->metadata.lqip
 }`;
 
 export async function getUpcomingEvents(): Promise<SanityEvent[]> {

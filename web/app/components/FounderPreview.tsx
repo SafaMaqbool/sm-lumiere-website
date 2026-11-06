@@ -13,6 +13,7 @@ export default function FounderPreview() {
             fill
             sizes="(min-width: 768px) 50vw, 100vw"
             className="object-cover"
+            priority
           />
         </Reveal>
 
