@@ -45,6 +45,18 @@ export type PressItem = {
   thumbnail?: SanityImageSource;
 };
 
+export type Book = {
+  _id: string;
+  title: string;
+  subtitle?: string;
+  author?: string;
+  edition?: string;
+  description: string;
+  coverImage: SanityImageSource;
+  previewFileUrl?: string;
+  purchaseUrl?: string;
+};
+
 const upcomingEventsQuery = `*[_type == "event" && date >= now()] | order(date asc) {
   _id, title, "slug": slug.current, date, location, description, coverImage
 }`;
@@ -67,6 +79,11 @@ const partnersQuery = `*[_type == "partner"] | order(name asc) {
 
 const pressItemsQuery = `*[_type == "pressItem"] | order(date desc) {
   _id, title, source, category, link, date, thumbnail
+}`;
+
+const booksQuery = `*[_type == "book"] | order(coalesce(order, 999) asc, _createdAt desc) {
+  _id, title, subtitle, author, edition, description, coverImage, purchaseUrl,
+  "previewFileUrl": previewFile.asset->url
 }`;
 
 export async function getUpcomingEvents(): Promise<SanityEvent[]> {
@@ -112,6 +129,14 @@ export async function getPartners(): Promise<Partner[]> {
 export async function getPressItems(): Promise<PressItem[]> {
   try {
     return await client.fetch(pressItemsQuery);
+  } catch {
+    return [];
+  }
+}
+
+export async function getBooks(): Promise<Book[]> {
+  try {
+    return await client.fetch(booksQuery);
   } catch {
     return [];
   }

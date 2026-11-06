@@ -6,6 +6,9 @@ import FounderVisionMission from "../components/FounderVisionMission";
 import FounderBook from "../components/FounderBook";
 import FounderMessage from "../components/FounderMessage";
 import CallToAction from "../components/CallToAction";
+import { getBooks } from "@/sanity/queries";
+
+export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
   title: "Meet Shagufta Munaf",
@@ -13,14 +16,16 @@ export const metadata: Metadata = {
     "Meet Shagufta Munaf, Founder & CEO of SM Lumière — entrepreneur, speaker, trainer, mindset coach, and community builder empowering entrepreneurs and communities.",
 };
 
-export default function MeetTheFounderPage() {
+export default async function MeetTheFounderPage() {
+  const books = await getBooks();
+
   return (
     <main>
       <FounderHero />
       <FounderRoles />
       <FounderLeadership />
       <FounderVisionMission />
-      <FounderBook />
+      <FounderBook books={books} />
       <FounderMessage />
       <CallToAction />
     </main>
